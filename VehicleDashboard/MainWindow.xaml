@@ -1,0 +1,189 @@
+﻿<Window x:Class="VehicleDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        xmlns:local="clr-namespace:VehicleDashboard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1150" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#20232A" />
+            <Setter Property="Foreground" Value="#FFC9E0DC" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontFamily" Value="./#Segoe UI" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="0" Height="0" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF635B5B" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter Property="Background" Value="#FF635B5B" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#FF981E2A" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="AliceBlue" Offset="0"/>
+                <GradientStop Color="RoyalBlue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="23" VerticalAlignment="Top" Background="AliceBlue" MouseLeftButtonDown="Grid_MouseLeftButtonDown"/>
+        <Image HorizontalAlignment="Left" Height="82" Margin="490,23,0,0" VerticalAlignment="Top" Width="165" Stretch="Fill" Source="logo.png"/>
+        <Label x:Name="lblTitle" Content="Blue Jay Communications Vehicle Dash Board" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="1122"/>
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="1000,34,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Foreground="White" Click="btnClose_Click"/>
+        <Button x:Name="btnVehicle1" Content="Button" HorizontalAlignment="Left" Margin="9,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle1_Click"/>
+        <Button x:Name="btnVehicle2" Content="Button" HorizontalAlignment="Left" Margin="70,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle2_Click"/>
+        <Button x:Name="btnVehicle3" Content="Button" HorizontalAlignment="Left" Margin="131,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle3_Click"/>
+        <Button x:Name="btnVehicle4" Content="Button" HorizontalAlignment="Left" Margin="192,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle4_Click"/>
+        <Button x:Name="btnVehicle5" Content="Button" HorizontalAlignment="Left" Margin="252,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle5_Click"/>
+        <Button x:Name="btnVehicle6" Content="Button" HorizontalAlignment="Left" Margin="313,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle6_Click"/>
+        <Button x:Name="btnVehicle7" Content="Button" HorizontalAlignment="Left" Margin="378,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle7_Click"/>
+        <Button x:Name="btnVehicle8" Content="Button" HorizontalAlignment="Left" Margin="439,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle8_Click"/>
+        <Button x:Name="btnVehicle9" Content="Button" HorizontalAlignment="Left" Margin="503,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle9_Click"/>
+        <Button x:Name="btnVehicle10" Content="Button" HorizontalAlignment="Left" Margin="564,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle10_Click"/>
+        <Button x:Name="btnVehicle11" Content="Button" HorizontalAlignment="Left" Margin="627,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle11_Click"/>
+        <Button x:Name="btnVehicle12" Content="Button" HorizontalAlignment="Left" Margin="688,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle12_Click"/>
+        <Button x:Name="btnVehicle13" Content="Button" HorizontalAlignment="Left" Margin="752,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle13_Click"/>
+        <Button x:Name="btnVehicle14" Content="Button" HorizontalAlignment="Left" Margin="813,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle14_Click"/>
+        <Button x:Name="btnVehicle15" Content="Button" HorizontalAlignment="Left" Margin="873,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle15_Click"/>
+        <Button x:Name="btnVehicle16" Content="Button" HorizontalAlignment="Left" Margin="934,181,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle16_Click"/>
+        <Button x:Name="btnVehicle17" Content="Button" HorizontalAlignment="Left" Margin="9,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle17_Click"/>
+        <Button x:Name="btnVehicle18" Content="Button" HorizontalAlignment="Left" Margin="70,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle18_Click"/>
+        <Button x:Name="btnVehicle19" Content="Button" HorizontalAlignment="Left" Margin="131,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle19_Click"/>
+        <Button x:Name="btnVehicle20" Content="Button" HorizontalAlignment="Left" Margin="192,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle20_Click"/>
+        <Button x:Name="btnVehicle21" Content="Button" HorizontalAlignment="Left" Margin="252,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle21_Click"/>
+        <Button x:Name="btnVehicle22" Content="Button" HorizontalAlignment="Left" Margin="313,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle22_Click"/>
+        <Button x:Name="btnVehicle23" Content="Button" HorizontalAlignment="Left" Margin="378,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle23_Click"/>
+        <Button x:Name="btnVehicle24" Content="Button" HorizontalAlignment="Left" Margin="439,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle24_Click"/>
+        <Button x:Name="btnVehicle25" Content="Button" HorizontalAlignment="Left" Margin="503,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle25_Click"/>
+        <Button x:Name="btnVehicle26" Content="Button" HorizontalAlignment="Left" Margin="564,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle26_Click"/>
+        <Button x:Name="btnVehicle27" Content="Button" HorizontalAlignment="Left" Margin="627,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle27_Click"/>
+        <Button x:Name="btnVehicle28" Content="Button" HorizontalAlignment="Left" Margin="688,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle28_Click"/>
+        <Button x:Name="btnVehicle29" Content="Button" HorizontalAlignment="Left" Margin="752,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle29_Click"/>
+        <Button x:Name="btnVehicle30" Content="Button" HorizontalAlignment="Left" Margin="813,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle30_Click"/>
+        <Button x:Name="btnVehicle31" Content="Button" HorizontalAlignment="Left" Margin="873,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle31_Click"/>
+        <Button x:Name="btnVehicle32" Content="Button" HorizontalAlignment="Left" Margin="934,236,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle32_Click"/>
+        <Button x:Name="btnVehicle33" Content="Button" HorizontalAlignment="Left" Margin="9,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle33_Click"/>
+        <Button x:Name="btnVehicle34" Content="Button" HorizontalAlignment="Left" Margin="70,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle34_Click"/>
+        <Button x:Name="btnVehicle35" Content="Button" HorizontalAlignment="Left" Margin="131,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle35_Click"/>
+        <Button x:Name="btnVehicle36" Content="Button" HorizontalAlignment="Left" Margin="192,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle36_Click"/>
+        <Button x:Name="btnVehicle37" Content="Button" HorizontalAlignment="Left" Margin="252,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle37_Click"/>
+        <Button x:Name="btnVehicle38" Content="Button" HorizontalAlignment="Left" Margin="313,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle38_Click"/>
+        <Button x:Name="btnVehicle39" Content="Button" HorizontalAlignment="Left" Margin="378,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle39_Click"/>
+        <Button x:Name="btnVehicle40" Content="Button" HorizontalAlignment="Left" Margin="439,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle40_Click"/>
+        <Button x:Name="btnVehicle41" Content="Button" HorizontalAlignment="Left" Margin="503,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle41_Click"/>
+        <Button x:Name="btnVehicle42" Content="Button" HorizontalAlignment="Left" Margin="564,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle42_Click"/>
+        <Button x:Name="btnVehicle43" Content="Button" HorizontalAlignment="Left" Margin="627,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle43_Click"/>
+        <Button x:Name="btnVehicle44" Content="Button" HorizontalAlignment="Left" Margin="688,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle44_Click"/>
+        <Button x:Name="btnVehicle45" Content="Button" HorizontalAlignment="Left" Margin="752,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle45_Click"/>
+        <Button x:Name="btnVehicle46" Content="Button" HorizontalAlignment="Left" Margin="813,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle46_Click"/>
+        <Button x:Name="btnVehicle47" Content="Button" HorizontalAlignment="Left" Margin="873,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle47_Click"/>
+        <Button x:Name="btnVehicle48" Content="Button" HorizontalAlignment="Left" Margin="934,291,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle48_Click"/>
+        <Button x:Name="btnVehicle49" Content="Button" HorizontalAlignment="Left" Margin="9,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle49_Click"/>
+        <Button x:Name="btnVehicle50" Content="Button" HorizontalAlignment="Left" Margin="70,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle50_Click"/>
+        <Button x:Name="btnVehicle51" Content="Button" HorizontalAlignment="Left" Margin="131,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle51_Click"/>
+        <Button x:Name="btnVehicle52" Content="Button" HorizontalAlignment="Left" Margin="192,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle52_Click"/>
+        <Button x:Name="btnVehicle53" Content="Button" HorizontalAlignment="Left" Margin="252,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle53_Click"/>
+        <Button x:Name="btnVehicle54" Content="Button" HorizontalAlignment="Left" Margin="313,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle54_Click"/>
+        <Button x:Name="btnVehicle55" Content="Button" HorizontalAlignment="Left" Margin="378,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle55_Click"/>
+        <Button x:Name="btnVehicle56" Content="Button" HorizontalAlignment="Left" Margin="439,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle56_Click"/>
+        <Button x:Name="btnVehicle57" Content="Button" HorizontalAlignment="Left" Margin="503,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle57_Click"/>
+        <Button x:Name="btnVehicle58" Content="Button" HorizontalAlignment="Left" Margin="564,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle58_Click"/>
+        <Button x:Name="btnVehicle59" Content="Button" HorizontalAlignment="Left" Margin="627,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle59_Click"/>
+        <Button x:Name="btnVehicle60" Content="Button" HorizontalAlignment="Left" Margin="688,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle60_Click"/>
+        <Button x:Name="btnVehicle61" Content="Button" HorizontalAlignment="Left" Margin="752,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle61_Click"/>
+        <Button x:Name="btnVehicle62" Content="Button" HorizontalAlignment="Left" Margin="813,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle62_Click"/>
+        <Button x:Name="btnVehicle63" Content="Button" HorizontalAlignment="Left" Margin="873,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle63_Click"/>
+        <Button x:Name="btnVehicle64" Content="Button" HorizontalAlignment="Left" Margin="934,348,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle64_Click"/>
+        <Button x:Name="btnVehicle65" Content="Button" HorizontalAlignment="Left" Margin="9,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle65_Click"/>
+        <Button x:Name="btnVehicle66" Content="Button" HorizontalAlignment="Left" Margin="70,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle66_Click"/>
+        <Button x:Name="btnVehicle67" Content="Button" HorizontalAlignment="Left" Margin="131,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle67_Click"/>
+        <Button x:Name="btnVehicle68" Content="Button" HorizontalAlignment="Left" Margin="192,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle68_Click"/>
+        <Button x:Name="btnVehicle69" Content="Button" HorizontalAlignment="Left" Margin="252,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle69_Click"/>
+        <Button x:Name="btnVehicle70" Content="Button" HorizontalAlignment="Left" Margin="313,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle70_Click"/>
+        <Button x:Name="btnVehicle71" Content="Button" HorizontalAlignment="Left" Margin="378,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle71_Click"/>
+        <Button x:Name="btnVehicle72" Content="Button" HorizontalAlignment="Left" Margin="439,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle72_Click"/>
+        <Button x:Name="btnVehicle73" Content="Button" HorizontalAlignment="Left" Margin="503,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle73_Click"/>
+        <Button x:Name="btnVehicle74" Content="Button" HorizontalAlignment="Left" Margin="564,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle74_Click"/>
+        <Button x:Name="btnVehicle75" Content="Button" HorizontalAlignment="Left" Margin="627,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle75_Click"/>
+        <Button x:Name="btnVehicle76" Content="Button" HorizontalAlignment="Left" Margin="688,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle76_Click"/>
+        <Button x:Name="btnVehicle77" Content="Button" HorizontalAlignment="Left" Margin="752,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle77_Click"/>
+        <Button x:Name="btnVehicle78" Content="Button" HorizontalAlignment="Left" Margin="813,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle78_Click"/>
+        <Button x:Name="btnVehicle79" Content="Button" HorizontalAlignment="Left" Margin="873,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle79_Click"/>
+        <Button x:Name="btnVehicle80" Content="Button" HorizontalAlignment="Left" Margin="934,403,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle80_Click"/>
+        <Button x:Name="btnVehicle81" Content="Button" HorizontalAlignment="Left" Margin="9,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle81_Click"/>
+        <Button x:Name="btnVehicle82" Content="Button" HorizontalAlignment="Left" Margin="70,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle82_Click"/>
+        <Button x:Name="btnVehicle83" Content="Button" HorizontalAlignment="Left" Margin="131,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle83_Click"/>
+        <Button x:Name="btnVehicle84" Content="Button" HorizontalAlignment="Left" Margin="192,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle84_Click"/>
+        <Button x:Name="btnVehicle85" Content="Button" HorizontalAlignment="Left" Margin="252,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle85_Click"/>
+        <Button x:Name="btnVehicle86" Content="Button" HorizontalAlignment="Left" Margin="313,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle86_Click"/>
+        <Button x:Name="btnVehicle87" Content="Button" HorizontalAlignment="Left" Margin="378,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle87_Click"/>
+        <Button x:Name="btnVehicle88" Content="Button" HorizontalAlignment="Left" Margin="439,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle88_Click"/>
+        <Button x:Name="btnVehicle89" Content="Button" HorizontalAlignment="Left" Margin="503,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle89_Click"/>
+        <Button x:Name="btnVehicle90" Content="Button" HorizontalAlignment="Left" Margin="564,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle90_Click"/>
+        <Button x:Name="btnVehicle91" Content="Button" HorizontalAlignment="Left" Margin="627,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle91_Click"/>
+        <Button x:Name="btnVehicle92" Content="Button" HorizontalAlignment="Left" Margin="688,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle92_Click"/>
+        <Button x:Name="btnVehicle93" Content="Button" HorizontalAlignment="Left" Margin="752,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle93_Click"/>
+        <Button x:Name="btnVehicle94" Content="Button" HorizontalAlignment="Left" Margin="813,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle94_Click"/>
+        <Button x:Name="btnVehicle95" Content="Button" HorizontalAlignment="Left" Margin="873,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle95_Click"/>
+        <Button x:Name="btnVehicle96" Content="Button" HorizontalAlignment="Left" Margin="934,458,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle96_Click"/>
+        <Button x:Name="btnVehicle97" Content="Button" HorizontalAlignment="Left" Margin="9,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle97_Click"/>
+        <Button x:Name="btnVehicle98" Content="Button" HorizontalAlignment="Left" Margin="70,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle98_Click"/>
+        <Button x:Name="btnVehicle99" Content="Button" HorizontalAlignment="Left" Margin="131,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle99_Click"/>
+        <Button x:Name="btnVehicle100" Content="Button" HorizontalAlignment="Left" Margin="192,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle100_Click"/>
+        <Button x:Name="btnVehicle101" Content="Button" HorizontalAlignment="Left" Margin="252,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle101_Click"/>
+        <Button x:Name="btnVehicle102" Content="Button" HorizontalAlignment="Left" Margin="313,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle102_Click"/>
+        <Button x:Name="btnVehicle103" Content="Button" HorizontalAlignment="Left" Margin="378,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle103_Click"/>
+        <Button x:Name="btnVehicle104" Content="Button" HorizontalAlignment="Left" Margin="439,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle104_Click"/>
+        <Button x:Name="btnVehicle105" Content="Button" HorizontalAlignment="Left" Margin="503,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle105_Click"/>
+        <Button x:Name="btnVehicle106" Content="Button" HorizontalAlignment="Left" Margin="564,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle106_Click"/>
+        <Button x:Name="btnVehicle107" Content="Button" HorizontalAlignment="Left" Margin="627,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle107_Click"/>
+        <Button x:Name="btnVehicle108" Content="Button" HorizontalAlignment="Left" Margin="688,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle108_Click"/>
+        <Button x:Name="btnVehicle109" Content="Button" HorizontalAlignment="Left" Margin="752,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle109_Click"/>
+        <Button x:Name="btnVehicle110" Content="Button" HorizontalAlignment="Left" Margin="813,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle110_Click"/>
+        <Button x:Name="btnVehicle111" Content="Button" HorizontalAlignment="Left" Margin="873,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle111_Click"/>
+        <Button x:Name="btnVehicle112" Content="Button" HorizontalAlignment="Left" Margin="934,513,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="btnVehicle112_Click"/>
+        <Button x:Name="btnEmployeeDashboard" HorizontalAlignment="Left" Margin="31,44,0,0" VerticalAlignment="Top" Width="125" Height="55" FontSize="18" Click="btnEmployeeDashboard_Click">
+            <TextBlock x:Name="txtEmployeeDashboard" TextWrapping="Wrap" Text="Employee Dashboard" TextAlignment="Center"/>
+        </Button>
+        <Label x:Name="lblLedgend" Content="Legend" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="1016,299,0,0" VerticalAlignment="Top" Height="56" Width="93"/>
+        <Label x:Name="lblNoProblem" Background="Green" HorizontalContentAlignment="Center" Foreground="White" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="1016,357,0,0" VerticalAlignment="Top" Height="56" Width="93">
+            <TextBlock x:Name="tblNoProblem" TextWrapping="Wrap" Text="No Problems" TextAlignment="Center"/>
+        </Label>
+        <Label x:Name="lblNeedsWork" HorizontalContentAlignment="Center" Background="Yellow" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="1016,413,0,0" VerticalAlignment="Top" Height="56" Width="93">
+            <TextBlock x:Name="tblNeedsWork" TextWrapping="Wrap" Text="Needs Work" TextAlignment="Center"/>
+        </Label>
+        <Label x:Name="lblDown" Content="Down" Background="Red" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="1016,469,0,0" VerticalAlignment="Top" Height="56" Width="93"/>
+        <Label x:Name="lblSelectOffice" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" HorizontalAlignment="Left" Margin="1002,181,0,0" VerticalAlignment="Top" Height="56" Width="120">
+            <TextBlock x:Name="tblSelectOffice" TextWrapping="Wrap" Text="Select Office" TextAlignment="Center"/>
+        </Label>
+        <ComboBox x:Name="cboSelectOffice" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" HorizontalAlignment="Left" Margin="1002,253,-5,0" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
